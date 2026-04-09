@@ -1,0 +1,68 @@
+h1 {
+	border-bottom: 1px solid #cfcfcf;
+	padding-bottom: 10px;
+	margin-bottom: 16px;
+}
+
+.admin-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: Arial, sans-serif;
+}
+
+.admin-table th,
+.admin-table td {
+	border: 1px solid #e1e1e1;
+	text-align: left;
+	padding: 10px;
+}
+
+.admin-table th {
+	font-weight: 700;
+	background-color: #fff;
+}
+
+.admin-table tbody tr:nth-child(even) {
+	background-color: #f3f3f3;
+}
+
+.score-header,
+.actions-header {
+	width: 16%;
+}
+
+.score-input {
+	width: 100%;
+	max-width: 240px;
+	border: 1px solid #d8d8d8;
+	border-radius: 6px;
+	padding: 8px 10px;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+.update-btn {
+	background-color: #0d6efd;
+	border: none;
+	color: #fff;
+	border-radius: 6px;
+	padding: 8px 14px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.update-btn:disabled {
+	opacity: 0.7;
+	cursor: wait;
+}
+
+.status-message {
+	margin: 0 0 12px;
+	color: #1f6f3d;
+}
+
+.error-message {
+	margin: 0 0 12px;
+	color: #b42318;
+	font-weight: 600;
+}

@@ -1,0 +1,24 @@
+<div class="routes-container">
+  <h1>Teams</h1>
+  <table class="managers-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Rank</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Loop through every team returned by the API -->
+      <tr *ngFor="let team of teams">
+        <td class="team-name-cell">
+          <!-- Dot color comes from the team's rgb value in the database -->
+          <span class="team-dot" [style.background-color]="'rgb(' + team.rgb + ')'" [title]="team.name + ' color'"></span>
+          <!-- Team name text -->
+          <span>{{ team.name }}</span>
+        </td>
+        <!-- Team power ranking -->
+        <td>{{ team.powerrank }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

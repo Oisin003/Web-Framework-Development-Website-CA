@@ -1,0 +1,53 @@
+<div class="routes-container">
+  <h1>Scoring</h1>
+
+  <h2>Total per match</h2>
+
+  <table class="stats-table">
+    <thead>
+      <tr>
+        <th>Division</th>
+        <th>Round 1</th>
+        <th>Round 2</th>
+        <th>Round 3</th>
+        <th>Round 4</th>
+        <th>Round 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of rows">
+        <td>{{ row.division }}</td>
+        <td>{{ row.round1 | number:'1.1-1' }}</td>
+        <td>{{ row.round2 | number:'1.1-1' }}</td>
+        <td>{{ row.round3 | number:'1.1-1' }}</td>
+        <td>{{ row.round4 | number:'1.1-1' }}</td>
+        <td>{{ row.round5 | number:'1.1-1' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Teams per Round</h2>
+
+  <table class="stats-table">
+    <thead>
+      <tr>
+        <th>Teams</th>
+        <th>Round 1</th>
+        <th>Round 2</th>
+        <th>Round 3</th>
+        <th>Round 4</th>
+        <th>Round 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of teamRows">
+        <td>{{ row.team }}</td>
+        <td>{{ row.round1 }}</td>
+        <td>{{ row.round2 }}</td>
+        <td>{{ row.round3 }}</td>
+        <td>{{ row.round4 }}</td>
+        <td>{{ row.round5 }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,39 @@
+h1 {
+    border-bottom: 1px solid #000000;
+}
+
+p{
+    font-size: 20px;
+    color: black;
+}
+
+/* Table Styles - https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.team-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.team-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}

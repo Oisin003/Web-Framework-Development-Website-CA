@@ -1,0 +1,45 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <img src="/logo.png" alt="GAA Logo" class="navbar-logo" />
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/routes">Routes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/managers">Managers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/teams">Teams</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/results">Results</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/fixtures">Fixtures</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/teamrankings">Team Rankings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/scoringstats">Scoring Stats</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/scoringstatsII">Scoring Stats II</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/scoringcharts">Scoring Charts</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a class="nav-link" routerLink="/admin">Admin</a>
+      </li>
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a class="nav-link" href="#" (click)="logout($event)">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

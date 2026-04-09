@@ -1,0 +1,56 @@
+<div class="routes-container">
+  <h1>Scoring Stats (per match)</h1>
+
+  <!-- Division filter buttons -->
+  <div class="division-filters">
+    <label>
+      <input type="radio" name="division" [checked]="selectedDivision === 'all'" (change)="setDivision('all')" />
+      All
+    </label>
+    <label>
+      <input type="radio" name="division" [checked]="selectedDivision === 1" (change)="setDivision(1)" />
+      D1
+    </label>
+    <label>
+      <input type="radio" name="division" [checked]="selectedDivision === 2" (change)="setDivision(2)" />
+      D2
+    </label>
+    <label>
+      <input type="radio" name="division" [checked]="selectedDivision === 3" (change)="setDivision(3)" />
+      D3
+    </label>
+    <label>
+      <input type="radio" name="division" [checked]="selectedDivision === 4" (change)="setDivision(4)" />
+      D4
+    </label>
+  </div>
+
+  <!-- Team scoring averages per match -->
+  <table class="stats-table">
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>Matches</th>
+        <th>Total</th>
+        <th>Goals</th>
+        <th>2Pts</th>
+        <th>1Pts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data rows -->
+      <tr *ngFor="let stat of filteredStats">
+        <td class="team-name-cell">
+          <span class="team-dot" [style.background-color]="getTeamColor(stat.team)"></span>
+          <span>{{ stat.team }}</span>
+        </td>
+        <td>{{ stat.matches }}</td>
+        <td>{{ stat.total }}</td>
+        <td>{{ stat.goals }}</td>
+        <td>{{ stat.twoPts }}</td>
+        <td>{{ stat.onePts }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

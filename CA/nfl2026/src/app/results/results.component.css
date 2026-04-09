@@ -1,0 +1,73 @@
+h1 {
+    border-bottom: 1px solid #cfcfcf;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.division-filters {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0 14px;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 12px;
+}
+
+.division-filters label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #555;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.results-table th,
+.results-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.results-table th {
+    font-weight: 700;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.team-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.team-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.round-section {
+    margin-bottom: 1.25rem;
+}
+
+.status-message {
+    margin: 0.5rem 0 1rem;
+    color: #444;
+}
+
+.error-message {
+    color: #b42318;
+    font-weight: 600;
+}
