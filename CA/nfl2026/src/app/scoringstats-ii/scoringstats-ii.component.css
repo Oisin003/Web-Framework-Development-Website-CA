@@ -1,0 +1,38 @@
+h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+h2 {
+    margin: 20px 0 12px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.tbl {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tbl th,
+.tbl td {
+    padding: 0.45rem 0.5rem;
+    border: 1px solid #d9d9d9;
+    text-align: left;
+}
+
+.tbl thead th {
+    background: #f3f3f3;
+    font-weight: 700;
+}
+
+.tbl tbody tr:nth-child(odd) {
+    background: #e8e8e8;
+}
+
+.tbl tbody tr:nth-child(even) {
+    background: #ffffff;
+}

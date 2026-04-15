@@ -1,0 +1,17 @@
+<div class="login-container">
+	<h1>Login</h1>
+
+	<!-- Show this message if login fails -->
+	<p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+	<label for="email">Email address</label>
+	<input id="email" type="email" placeholder="oisin@email.com" [(ngModel)]="email" />
+
+	<label for="password">Password</label>
+	<input id="password" type="password" placeholder="Password" [(ngModel)]="password" />
+
+	<!-- Button is disabled while request is running -->
+	<button type="button" (click)="login()" [disabled]="isSubmitting">
+		{{ isSubmitting ? 'Checking...' : 'Login' }}
+	</button>
+</div>

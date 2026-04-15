@@ -1,0 +1,17 @@
+h1 {
+    border-bottom: 1px solid #000000;
+}
+
+.team-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.team-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}

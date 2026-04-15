@@ -1,0 +1,18 @@
+<div class="routes-container">
+  <h1>Managers</h1>
+  <div class="table-responsive">
+    <table class="tbl">
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- This loops through the managers array to display each manager's name in a table row. -->
+      <tr *ngFor="let manager of managers"> <!-- https://www.geeksforgeeks.org/angular-js/angular10-ngfor-directive/ -->
+        <td>{{ manager.name }}</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+</div>

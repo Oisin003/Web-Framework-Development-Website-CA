@@ -1,0 +1,60 @@
+<div class="routes-container">
+  <h1>Fixtures</h1>
+
+  <div class="division-filters">
+    <label class="form-check">
+      <input class="form-check-input" type="radio" name="division" [checked]="selectedDivision === 'all'" (change)="setDivision('all')" />
+      All
+    </label>
+    <label class="form-check">
+      <input class="form-check-input" type="radio" name="division" [checked]="selectedDivision === 1" (change)="setDivision(1)" />
+      D1
+    </label>
+    <label class="form-check">
+      <input class="form-check-input" type="radio" name="division" [checked]="selectedDivision === 2" (change)="setDivision(2)" />
+      D2
+    </label>
+    <label class="form-check">
+      <input class="form-check-input" type="radio" name="division" [checked]="selectedDivision === 3" (change)="setDivision(3)" />
+      D3
+    </label>
+    <label class="form-check">
+      <input class="form-check-input" type="radio" name="division" [checked]="selectedDivision === 4" (change)="setDivision(4)" />
+      D4
+    </label>
+  </div>
+
+  <section *ngFor="let round of visibleRounds" class="round-section">
+    <h2>Round {{ round }}</h2>
+
+    <div class="table-responsive">
+      <table class="tbl">
+      <thead>
+        <tr>
+          <th>Division</th>
+          <th>Home Team</th>
+          <th>-</th>
+          <th>-</th>
+          <th>Away Team</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fixture of getFixturesForRound(round)">
+          <td>{{ fixture.division }}</td>
+          <td class="team-name-cell">
+            <span class="team-dot" [style.background-color]="getTeamColor(fixture.hteam)"></span>
+            <span>{{ fixture.hteam }}</span>
+          </td>
+          <td>{{ fixture.hteamscore }}</td>
+          <td>{{ fixture.ateamscore }}</td>
+          <td class="team-name-cell">
+            <span class="team-dot" [style.background-color]="getTeamColor(fixture.ateam)"></span>
+            <span>{{ fixture.ateam }}</span>
+          </td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>

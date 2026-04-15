@@ -1,0 +1,77 @@
+<section class="container page">
+	<h1>Results Admin</h1>
+
+	<!-- Show error message if loading or saving fails -->
+	<div *ngIf="errorMessage" class="err" role="alert">{{ errorMessage }}</div>
+
+	<!-- Main table for editing match scores -->
+	<div class="table-responsive">
+		<table class="tbl">
+		<thead>
+			<tr>
+				<th>Division</th>
+				<th>Home Team</th>
+				<th>Home Score</th>
+				<th>Away Score</th>
+				<th>Away Team</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Loop through each result row -->
+			<tr *ngFor="let result of matches">
+				<td>{{ result.division }}</td>
+				<td>
+					<input
+						type="text"
+						class="form-control"
+						[(ngModel)]="result.hteam"
+						[name]="'home-team-' + result.id"
+						placeholder="Home Team"
+					/>
+				</td>
+				<td>
+					<!-- User can edit home team score here -->
+					<input
+						type="text"
+						class="form-control"
+						[(ngModel)]="result.hteamscore"
+						[name]="'home-score-' + result.id"
+						placeholder="0-0-0"
+					/>
+				</td>
+				<td>
+					<!-- User can edit away team score here -->
+					<input
+						type="text"
+						class="form-control"
+						[(ngModel)]="result.ateamscore"
+						[name]="'away-score-' + result.id"
+						placeholder="0-0-0"
+					/>
+				</td>
+				<td>
+					<input
+						type="text"
+						class="form-control"
+						[(ngModel)]="result.ateam"
+						[name]="'away-team-' + result.id"
+						placeholder="Away Team"
+					/>
+				</td>
+				<td>
+					<!-- Click to save this one row -->
+					<button
+						type="button"
+						class="btn btnp"
+						(click)="updateMatch(result)"
+						[disabled]="savingId === result.id"
+					>
+						{{ savingId === result.id ? 'Saving...' : 'Update' }}
+					</button>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</section>

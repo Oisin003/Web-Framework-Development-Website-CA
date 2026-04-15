@@ -1,0 +1,21 @@
+<div class="routes-container">
+  <h1>Team Rankings</h1>
+
+  <!-- Prompt shown above the two team choices -->
+  <h2>Who has been the better team lately?</h2>
+
+  <div class="vote-options">
+    <!-- Team 1 choice -->
+    <button class="vote-btn" type="button" [disabled]="!canVote" (click)="voteForFirstTeam()">
+      {{ firstTeam?.name || 'Loading...' }}
+    </button>
+
+    <!-- Team 2 choice -->
+    <button class="vote-btn" type="button" [disabled]="!canVote" (click)="voteForSecondTeam()">
+      {{ secondTeam?.name || 'Loading...' }}
+    </button>
+  </div>
+
+  <!-- Countdown of remaining votes -->
+  <p class="votes-remaining">{{ votesRemaining }} votes remaining</p>
+</div>

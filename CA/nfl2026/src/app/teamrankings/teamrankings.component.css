@@ -1,0 +1,47 @@
+h1 {
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 8px;
+}
+
+.vote-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vote-btn {
+    width: 100%;
+    min-height: 38px;
+    border: 1px solid #808892;
+    border-radius: 5px;
+    background: #6f7984;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.vote-btn:hover:enabled {
+    background: #616b76;
+}
+
+.vote-btn:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+.votes-remaining {
+    margin-top: 12px;
+    color: #222;
+    font-size: 0.95rem;
+}

@@ -1,0 +1,31 @@
+<div class="routes-container">
+	<h1>Score For/Against</h1>
+
+	<div class="table-responsive">
+		<table class="tbl">
+		<thead>
+			<tr>
+				<th>Team</th>
+				<th>For</th>
+				<th>Against</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let row of rows">
+				<td class="team-name-cell">
+					<span class="team-dot" [style.background-color]="row.color"></span>
+					<span>{{ row.team }}</span>
+				</td>
+				<td>{{ row.for }}</td>
+				<td>{{ row.against }}</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+
+	<div class="chart-section">
+		<div class="chart-scroll">
+			<div #chartHost class="chart-host"></div>
+		</div>
+	</div>
+</div>
